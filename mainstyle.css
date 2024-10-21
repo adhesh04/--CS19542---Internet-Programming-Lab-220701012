@@ -1,0 +1,108 @@
+/* Importing Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 100px auto 50px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #7d2ae8;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+button {
+  background-color: #7d2ae8;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5e1db3;
+}
+
+#user-details {
+  margin-top: 40px;
+}
+
+#user-details h2 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+#user-details ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#user-details ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #666;
+}
+
+#user-details ul li strong {
+  color: #333;
+  font-weight: 500;
+}
+
+/* Logout link */
+a {
+  display: inline-block;
+  margin-top: 30px;
+  color: #7d2ae8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #5e1db3;
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #user-details h2 {
+    font-size: 1.5rem;
+  }
+
+  #user-details ul li {
+    font-size: 0.95rem;
+  }
+
+  button {
+    padding: 8px 16px;
+  }
+}
