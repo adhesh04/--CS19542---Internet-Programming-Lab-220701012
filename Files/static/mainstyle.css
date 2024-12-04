@@ -1,0 +1,117 @@
+/* Importing Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 100px auto 50px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #7d2ae8;
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+}
+
+th {
+  background-color: #7d2ae8;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+td {
+  color: #333;
+  text-align: center;
+}
+
+button {
+  background-color: #7d2ae8;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5e1db3;
+}
+
+.logout-link {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+  color: #7d2ae8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.logout-link:hover {
+  color: #5e1db3;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  table th,
+  table td {
+    font-size: 0.85rem;
+  }
+
+  button {
+    padding: 6px 10px;
+  }
+}

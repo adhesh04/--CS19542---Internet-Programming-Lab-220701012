@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Main Page</title>
+    <link rel="stylesheet" href="/static/mainstyle.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Admin Dashboard</h1>
+    </header>
+    <main>
+      <div class="container">
+        <h2>Welcome, Admin!</h2>
+        <p>Manage employee reward points and activities.</p>
+        <div id="user-details">
+          <h2>Employee Details</h2>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Designation</th>
+                  <th>Branch Office</th>
+                  <th>Department</th>
+                  <th>Annual Income</th>
+                  <th>Points</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for employee in employees %}
+                <tr>
+                  <td>{{ employee.id }}</td>
+                  <td>{{ employee.name }}</td>
+                  <td>{{ employee.email }}</td>
+                  <td>{{ employee.designation }}</td>
+                  <td>{{ employee.branch_office }}</td>
+                  <td>{{ employee.department }}</td>
+                  <td>${{ "{:,.2f}".format(employee.annual_income) }}</td>
+                  <td>{{ employee.points }}</td>
+                  <td>
+                    <form
+                      action="/update_points"
+                      method="POST"
+                      style="display: inline"
+                    >
+                      <input
+                        type="hidden"
+                        name="employee_id"
+                        value="{{ employee.id }}"
+                      />
+                      <button
+                        type="submit"
+                        name="action"
+                        value="add"
+                        class="point-button"
+                      >
+                        +
+                      </button>
+                    </form>
+                    <form
+                      action="/update_points"
+                      method="POST"
+                      style="display: inline"
+                    >
+                      <input
+                        type="hidden"
+                        name="employee_id"
+                        value="{{ employee.id }}"
+                      />
+                      <button
+                        type="submit"
+                        name="action"
+                        value="subtract"
+                        class="point-button"
+                      >
+                        -
+                      </button>
+                    </form>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <a href="/logout" class="logout-link">Logout</a>
+      </div>
+    </main>
+  </body>
+</html>

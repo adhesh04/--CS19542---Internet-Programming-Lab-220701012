@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/static/mainstyle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome, {{ user.name }}!</h1>
+
+      <!-- User details section -->
+      <div id="user-details">
+        <h2>Your Details:</h2>
+        <ul>
+          <li><strong>Email:</strong> {{ user.email }}</li>
+          <li><strong>Designation:</strong> {{ user.designation }}</li>
+          <li><strong>Branch of Office:</strong> {{ user.branch_office }}</li>
+          <li><strong>Department:</strong> {{ user.department }}</li>
+          <li><strong>Annual Income:</strong> {{ user.annual_income }}</li>
+          <li><strong>Points:</strong> {{ user.points }}</li>
+        </ul>
+      </div>
+
+      <!-- Logout link -->
+      <a href="/login.html">Logout</a>
+    </div>
+  </body>
+</html>
